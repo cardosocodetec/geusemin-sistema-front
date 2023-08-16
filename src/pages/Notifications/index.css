@@ -1,0 +1,140 @@
+.notifications__head{
+    display: flex;
+    flex-direction: column;
+}
+
+.notifications__head h2{
+    color: #001A72;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 66px;
+    letter-spacing: -0.88px;
+}
+
+.dark .notifications__head h2{
+    color: #fff;
+}
+
+.notifications__items{
+    margin-top: 32px;
+    display: grid;
+    row-gap: 16px;
+}
+
+.notification{
+    padding-bottom: 26px;
+    border-bottom: 1px solid #B6B6BB;
+}
+
+.notification__head{
+    display: flex;
+    flex-direction: column;
+}
+
+.notification__title{
+    display: flex;
+    align-items: center;
+}
+
+.notification__title h3{
+    color: #004EDA;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 27px;
+    letter-spacing: 0.36px;
+    margin-left: 8px;
+}
+
+.notification__time p{
+    color: #5A5A5F;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0.28px;
+}
+
+.notification__description p{
+    margin-top: 18px;
+    color: #3B3B40;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0.28px;
+}
+
+.dark .notification__description p{
+    color: #fff;
+}
+
+.notification__buttons{
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    width: max-content;
+    margin-top: 16px;
+}
+
+.notification__buttons button{
+    font-size: 14px;
+    margin-left: 26px;
+}
+
+.button-outline{
+    color: #004EDA;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 27px;
+    padding: 8px 16px;
+    width: max-content;
+    background-color: transparent;
+    border: 1px solid #004EDA;
+    border-radius: 4px;
+    transition: 200ms;
+}
+
+.button-outline:hover{
+    background-color: #004EDA;
+    color: #fff;
+}
+
+.button-full{
+    color: #fff;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 27px;
+    padding: 8px 16px;
+    width: max-content;
+    background-color: #004EDA;
+    border: 1px solid #004EDA;
+    border-radius: 4px;
+    transition: 200ms;
+}
+
+.button-full:hover{
+    background-color: #001A72;
+    border-color: #001A72;
+}
+
+@media (min-width: 768px){
+    .notifications__head{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .notification__head{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .notification__description p{
+        margin-left: 32px;
+    }
+}

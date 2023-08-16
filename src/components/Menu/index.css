@@ -1,0 +1,255 @@
+.menu__head{
+    background-color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 300;
+    transition: 200ms;
+}
+
+.menu__burger{
+    display: grid;
+    gap: 8px;
+}
+
+.menu__burger span{
+    background-color: #001A72;
+    width: 30px;
+    height: 2px;
+    margin: 0 auto;
+    border-radius: 100px;
+    display: block;
+    transition: 200ms;
+}
+
+.menu__burger.active .center-line{
+    opacity: 0;
+}
+
+.menu__burger.active .top-line{
+    transform: translateY(10px) rotate(45deg);
+}
+
+.menu__burger.active .bottom-line{
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+.menu__logo{
+    width: 200px;
+}
+
+.menu__user{
+    display: flex;
+    align-items: center;
+}
+
+.menu__perfil{
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.menu__perfil img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.menu__profile{
+    display: none;
+}
+
+.sidebar{
+    background-color: #fff;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 105px 40px 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 250;
+    transform: translateX(-100%);
+    transition: 200ms;
+}
+
+.sidebar.active{
+    transform: translateX(0);
+}
+
+.sidebar__group{
+    display: grid;
+    gap: 30px;
+}
+
+.sidebar__group:last-child{
+    padding-top: 30px;
+    border-top: 1px solid #D9D9D9;
+    margin-top: 30px;
+}
+
+.sidebar__group a span{
+    margin-left: 15px;
+    background-color: #001A72;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: 0.2px;
+}
+
+.sidebar__items a{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    width: max-content;
+    border-radius: 100px;
+    transition: 200ms;
+}
+
+.sidebar__items a:hover{
+    background-color: #CCC;
+}
+
+.sidebar__items a.active{
+    background-color: #001A72;
+}
+
+.sidebar__items p{
+    margin-left: 15px;
+    color: #5A5A5F;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 27px;
+    letter-spacing: 0.36px;
+}
+
+.sidebar__items a.active p{
+    color: #fff;
+}
+
+.submenu{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.submenu__head{
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.submenu__head p{
+    display: flex;
+    align-items: center;
+}
+
+.submenu__head p::after{
+    content: '\f0d7';
+    font-family: 'FontAwesome';
+    display: block;
+    margin-left: 12px;
+    transition: 200ms;
+}
+
+.submenu__head.active p::after{
+    transform: rotate(180deg);
+}
+
+.submenu__content{
+    align-self: flex-start;
+    opacity: 0;
+    display: none;
+    transition: 200ms;
+}
+
+.submenu__content.active{
+    opacity: 1;
+    display: grid;
+    gap: 5px;
+    margin-top: 8px;
+}
+
+.submenu__item p{
+    margin-left: 54px;
+    cursor: pointer;
+}
+
+.dark .menu__head, .dark .sidebar{
+    background-color: #353535;
+}
+
+.dark .menu__profile h3{
+    color: #fff;
+}
+
+.dark .sidebar__group p{
+    color: #fff;
+}
+
+@media (min-width: 768px){
+    .sidebar{
+        max-width: 280px;
+    }
+}
+
+@media (min-width: 1200px){
+    .menu__burger{
+        display: none;
+    }
+
+    .sidebar{
+        transform: translateX(0);
+    }
+
+    .menu__profile{
+        display: block;
+        margin-left: 20px;
+    }
+
+    .menu__profile h3{
+        color: #353535;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .menu__profile p{
+        color: #CCC;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .menu__logo{
+        width: 272px;
+    }
+
+    .menu__perfil{
+        width: 75px;
+        height: 75px;
+    }
+
+    .sidebar{
+        padding: 135px 40px 40px;
+    }
+}

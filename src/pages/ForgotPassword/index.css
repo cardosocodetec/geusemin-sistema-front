@@ -1,0 +1,119 @@
+.forgot{
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #1E4178;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.forgot__box{
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 50px;
+    margin: 0 10px;
+}
+
+.forgot__box h2{
+    color: #153060;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 52px;
+}
+
+.forgot__box >p{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    color: #828282;
+    margin-top: 32px;
+}
+
+.forgot__box form{
+    margin-top: 32px;
+    display: grid;
+    gap: 24px;
+}
+
+.forgot__field{
+    display: grid;
+    gap: 4px;
+    position: relative;
+}
+
+.forgot__field label{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    color: #153060;
+}
+
+.forgot__field input{
+    background-color: #FAFAFA;
+    border: 1px solid #EAEAEA;
+    border-radius: 5px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    padding: 16px 12px;
+    outline: none;
+    transition: 200ms;
+    color: #1E4178;
+}
+
+.forgot__field input:focus{
+    border-color: #9BADCA;
+    background-color: #fff;
+}
+
+.forgot__submit{
+    padding: 18px 32px;
+    background-color: #153060;
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    transition: 200ms;
+}
+
+.forgot__submit:hover{
+    background-color: #1E4178;
+}
+
+.forgot__forgot:hover{
+    text-decoration: underline;
+}
+
+
+.forgot__error p{
+    color: #E6845E;
+}
+
+@media (min-width: 768px){
+    .forgot__box{
+        background-color: #fff;
+        padding: 80px 60px;
+        border-radius: 50px;
+        margin: 0 10px;
+        width: 100%;
+        max-width: 658px;
+    }
+
+    .forgot__box h2{
+        font-size: 45px;
+    }
+}
